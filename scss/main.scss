@@ -1,0 +1,31 @@
+@use 'vars' as v;
+
+* {
+    box-sizing: border-box;
+    margin: 0 0;
+    padding: 0;
+}
+
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Lato, sans-serif;
+    // font-size: v.$font_size_main;
+    // color: v.$font_color_main;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    // background: v.$background_main;
+}
+
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-grow: 1;
+}
