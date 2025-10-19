@@ -104,12 +104,59 @@
 
 
 // Запитай у користувача число і виведи всі дільники цього числа.
-let userNumber = parseInt(prompt('Введіть число для пошуку його дільників'));
-let divisors = [];
+// let userNumber = parseInt(prompt('Введіть число для пошуку його дільників'));
+// let divisors = [];
 
-for (let i = 1; i <= userNumber; i++) {
-    if (userNumber % i === 0) {
-        divisors.push(i);
-    }
-}
-alert(`Дільники числа ${userNumber}: ${divisors}`);  
+// for (let i = 1; i <= userNumber; i++) {
+//     if (userNumber % i === 0) {
+//         divisors.push(i);
+//     }
+// }
+// alert(`Дільники числа ${userNumber}: ${divisors}`);  
+
+
+
+// Запитай у користувача п’ятирозрядне число і визначи, чи є воно паліндромом.
+// let fiveDigitNumber = prompt('Введіть п’ятирозрядне число');
+// console.log(typeof fiveDigitNumber);
+// if (fiveDigitNumber.length !== 5 || isNaN(fiveDigitNumber)) {
+//     alert('Введіть коректне пятирозрядне число');
+// }
+
+// let reversedNumber = fiveDigitNumber.split('').reverse().join('');
+
+// if (fiveDigitNumber === reversedNumber) {
+//     alert(`Число ${fiveDigitNumber} є паліндромом`);
+// } else {
+//     alert(`Число ${fiveDigitNumber} не є паліндромом`);
+// }   
+
+
+
+// Гра «Вгадай число». Запропонуй користувачеві загадати число від 0 до 100 і 
+// відгадай його наступним способом: кожну ітерацію циклу діли діапазон чисел навпіл, 
+// записуй результат в N і питай у користувача «Ваше число> N, <N або == N?». 
+// Залежно від того що вказав користувач, зменшуй діапазон. Початковий діапазон від 0 до 100, 
+// поділи навпіл і отримай 50. Якщо користувач вказав, що його число> 50, то зміни діапазон на від 50 до 100. 
+// І так до тих пір, поки користувач не вибере == N (буде корисним почитати про алгоритм: "бінарний пошук").
+
+let minNumber = 0;
+let maxNumber = 100;
+let guessed = false;
+
+alert('Загадайте число від 0 до 100, а я спробую його вгадати!');
+while (!guessed) {
+    let N = Math.floor((minNumber + maxNumber) / 2);
+    let userNumber = prompt('Ваше число > ' + N + ', < ' + N +  ' або == ' + N + '?');
+    
+    if (userNumber === '>') {
+        minNumber = N + 1;
+    } else if (userNumber === '<') {
+        maxNumber = N - 1;
+    } else if (userNumber === '==') {
+        alert('Я вгадав ваше число: ' + N + '!');
+        guessed = true;
+    } else {
+        alert('Будь ласка, введіть коректний символ: >, < або ==.');
+    }}
+    
