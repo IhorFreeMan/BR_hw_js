@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+  margin: 0 0;
+  padding: 0;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Lato, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-grow: 1;
+}/*# sourceMappingURL=main.css.map */
