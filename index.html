@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/fav/favicon.ico">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"> <!-- Leaflet CSS -->
+    <link href="./css/lightbox.css" rel="stylesheet"> <!-- Lightbox CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <!-- Slick CSS -->
+     <!-- <link rel="stylesheet" href="./css/"> -->
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container">
+            <nav class="header__navigation">
+                <a href="#" class="header__logo">
+                    <img class="header__logo-img" src="./assets/img/Logo.png" alt="Monticello Logo">
+                </a>
+
+                <input type="checkbox" id="burger-toggle" class="burger-toggle" hidden>
+                <label for="burger-toggle" class="burger__img"></label>
+                    <ul class="header__nav-list">
+                        <li class="header__nav-item"><a class="header__nav-link" href="#about">About Us</a></li>
+                        <li class="header__nav-item"><a class="header__nav-link" href="#projects">Projects</a></li>
+                        <li class="header__nav-item"><a class="header__nav-link" href="#news">News</a></li>
+                        <li class="header__nav-item"><a class="header__nav-link" href="#contact">Contact</a></li>
+                    </ul>
+                    <div class="header__social">
+                        <a class="header__social-link header__social-link--facebook" href="#" aria-label="Facebook">
+                            <svg class="header__social-icon" width="32" height="32">
+                                <use href="./assets/img/sprite/sprite.svg#facebook"></use>
+                            </svg>
+                        </a>
+                        <a class="header__social-link header__social-link--twitter header__social-link--active" href="#"
+                            aria-label="Twitter">
+                            <svg class="header__social-icon" width="32" height="32">
+                                <use href="./assets/img/sprite/sprite.svg#twitter"></use>
+                            </svg>
+                        </a>
+                        <a class="header__social-link header__social-link--instagram" href="#" aria-label="LinkedIn">
+                            <svg class="header__social-icon" width="32" height="32">
+                                <use href="./assets/img/sprite/sprite.svg#instagram"></use>
+                            </svg>
+                        </a>
+                    </div>
+
+
+            </nav>
+            <div class="hero">
+                <div class="hero__slider">
+                    <div class="hero-slide">
+                        <div class="hero__content">
+                            <h1 class="hero__title">SIMPLE & MODERN</h1>
+                            <p class="hero__subtitle">WE MAKE THE WORLD BEAUTIFUL EVERYDAY</p>
+                        </div>
+                    </div>
+                    <div class="hero-slide">
+                        <div class="hero__content">
+                            <h1 class="hero__title">INNOVATION THROUGH SIMPLICITY</h1>
+                            <p class="hero__subtitle">DESIGNING THE FUTURE WITH CLARIT</p>
+                        </div>
+                    </div>
+                    <div class="hero-slide">
+                        <div class="hero__content">
+                            <h1 class="hero__title">THE ART OF THE ESSENTIAL</h1>
+                            <p class="hero__subtitle">WMODERN SOLUTIONS, TIMELESS RESULTS</p>
+                        </div>
+                    </div>
+
+                    <div class="hero-slide">
+                        <div class="hero__content">
+                            <h1 class="hero__title">SHAPING SPACES, INSPIRING LIFE</h1>
+                            <p class="hero__subtitle">ELEGANCE IN EVERY DETAIL</p>
+                        </div>
+                    </div>
+                    <div class="hero-slide">
+                        <div class="hero__content">
+                            <h1 class="hero__title">BRINGING CREATIVE VISIONS TO LIFE</h1>
+                            <p class="hero__subtitle">WHERE FORM MEETS PURPOSE</p>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="hero__arrow" aria-label="Scroll down">
+                    <svg class="hero__arrow-icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <path d="M7 10L12 15L17 10" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </button>
+
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <main class="main">
+        <!-- What We Do Section -->
+        <section class="section__twu" id="projects">
+            <div class="container">
+                <h2 class="section__twu__title">WHAT WE DO</h2>
+
+                <div class="section__twu__content">
+                    <!-- Trade Center Card -->
+                    <div class="project-card">
+                        <div class="project-card__image">
+                            <img src="./assets/img/Mask_Group_1.jpg" alt="One World Trade Center"
+                                class="project-card__img">
+                        </div>
+                        <div class="project-card__info">
+                            <span class="project-card__category">ONE WORLD</span>
+                            <h3 class="project-card__title">TRADE CENTER</h3>
+                            <p class="project-card__description">
+                                Increasing prosperity in our lives can be accomplished by having the right frame of
+                                mind. The truth is, our thoughts are very powerful.
+                            </p>
+                            <button class="project-card__btn btn btn--outline">MORE DETAILS</button>
+                            <a href="#map" id="york" data-city="New York City" data-lat="40.7128" data-lng="-74.0060">
+                                <div class="project-card__location">
+                                    <svg class="project-card__location-icon" width="16" height="16">
+                                        <use href="./assets/img/sprite/sprite.svg#location"></use>
+                                    </svg>
+                                    <span class="project-card__location-text">New York City, United States - 1776
+                                        feet</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Commerce Centre Card -->
+                    <div class="project-card project-card--reverse">
+                        <div class="project-card__info">
+                            <span class="project-card__category">INTERNATIONAL</span>
+                            <h3 class="project-card__title">COMMERCE CENTRE</h3>
+                            <p class="project-card__description">
+                                Successful businesses have many things in common, today we'll look at the big "3" of
+                                recognition and how a digital advertising network may help.
+                            </p>
+                            <button class="project-card__btn btn btn--outline">MORE DETAILS</button>
+                            <a href="#map" data-city="Hong Kong" data-lat="22.3193" data-lng="114.1694">
+                                <div class="project-card__location">
+                                    <svg class="project-card__location-icon" width="16" height="16">
+                                        <use href="./assets/img/sprite/sprite.svg#location"></use>
+                                    </svg>
+                                    <span class="project-card__location-text">Hong Kong - 1588 feet</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="project-card__image">
+                            <img src="./assets/img/Mask_Group_2.jpg" alt="International Commerce Centre"
+                                class="project-card__img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Latest News Section -->
+        <section class="section__three" id="news">
+            <div class="container">
+                <h2 class="section__three__title">LATEST NEWS</h2>
+
+
+
+                <div class="news-slider">
+                    <article class="news-card">
+                        <div class="news-card__image">
+                            <img src="./assets/img/slider/1.jpg" alt="Unmatched Beauty of the Great"
+                                class="news-card__img">
+                        </div>
+                        <div class="news-card__content">
+                            <h3 class="news-card__title">SEE THE UNMATCHED BEAUTY OF THE GREAT.</h3>
+                            <p class="news-card__description">
+                                Free directories: directories are perfect for customers that are searching for...
+                            </p>
+                            <div class="news-card__author">
+                                <img src="./assets/img/autor/11.png" alt="Alja Brun" class="news-card__author-img">
+                                <div class="news-card__author-info">
+                                    <span class="news-card__author-name">ALJA BRUN</span>
+                                    <span class="news-card__author-date">20 Nov 2020</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="news-card">
+                        <div class="news-card__image">
+                            <img src="./assets/img/slider/2.png" alt="Effective Advertising Pointers"
+                                class="news-card__img">
+                        </div>
+                        <div class="news-card__content">
+                            <h3 class="news-card__title">EFFECTIVE ADVERTISING POINTERS.</h3>
+                            <p class="news-card__description">
+                                Having a home based business is a wonderful asset to your life...
+                            </p>
+                            <div class="news-card__author">
+                                <img src="./assets/img/autor/12.png" alt="Dominic Freeman"
+                                    class="news-card__author-img">
+                                <div class="news-card__author-info">
+                                    <span class="news-card__author-name">DOMINIC FREEMAN</span>
+                                    <span class="news-card__author-date">13 Dec 2020</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="news-card">
+                        <div class="news-card__image">
+                            <img src="./assets/img/slider/3.png" alt="Hypnotize Yourself Into The Ghost"
+                                class="news-card__img">
+                        </div>
+                        <div class="news-card__content">
+                            <h3 class="news-card__title">HYPNOTIZE YOURSELF INTO THE GHOST.</h3>
+                            <p class="news-card__description">
+                                There are many things that are important to catalog design...
+                            </p>
+                            <div class="news-card__author">
+                                <img src="./assets/img/autor/13.png" alt="Alice Ward" class="news-card__author-img">
+                                <div class="news-card__author-info">
+                                    <span class="news-card__author-name">ALICE WARD</span>
+                                    <span class="news-card__author-date">20 Nov 2020</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+
+                    <article class="news-card">
+                        <div class="news-card__image">
+                            <img src="./assets/img/slider/4.jpg" alt="Modern Architecture Trends"
+                                class="news-card__img">
+                        </div>
+                        <div class="news-card__content">
+                            <h3 class="news-card__title">MODERN ARCHITECTURE TRENDS.</h3>
+                            <p class="news-card__description">
+                                Architecture is evolving constantly with new technologies and materials...
+                            </p>
+                            <div class="news-card__author">
+                                <img src="./assets/img/autor/11.png" alt="John Smith" class="news-card__author-img">
+                                <div class="news-card__author-info">
+                                    <span class="news-card__author-name">JOHN SMITH</span>
+                                    <span class="news-card__author-date">15 Jan 2021</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="news-card">
+                        <div class="news-card__image">
+                            <img src="./assets/img/slider/5.jpg" alt="Sustainable Building Design"
+                                class="news-card__img">
+                        </div>
+                        <div class="news-card__content">
+                            <h3 class="news-card__title">SUSTAINABLE BUILDING DESIGN.</h3>
+                            <p class="news-card__description">
+                                Green building practices are becoming more important in modern construction...
+                            </p>
+                            <div class="news-card__author">
+                                <img src="./assets/img/autor/12.png" alt="Sarah Johnson" class="news-card__author-img">
+                                <div class="news-card__author-info">
+                                    <span class="news-card__author-name">SARAH JOHNSON</span>
+                                    <span class="news-card__author-date">22 Feb 2021</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section__gallery" id="gallery">
+            <div class="container">
+                <h2 class="section__gallery__title">GALLERY</h2>
+                <div class="gallery">
+                    <div class="gallery__item gallery__item--blur gallery__item_col_2_row_2">
+                        <a href="./assets/img/gallery/11.png" data-lightbox="roadtrip"><img
+                                src="./assets/img/gallery/11.png" alt="" class="gallery__img"></a>
+
+                    </div>
+                    <div class="gallery__item gallery__item--blur">
+                        <a href="./assets/img/gallery/12.png" data-lightbox="roadtrip">
+                            <img src="./assets/img/gallery/12.png" alt="" class="gallery__img">
+                        </a>
+                    </div>
+                    <div class="gallery__item gallery__item--blur">
+                        <a href="./assets/img/gallery/13.png" data-lightbox="roadtrip">
+                            <img src="./assets/img/gallery/13.png" alt="" class="gallery__img">
+                        </a>
+                    </div>
+                    <div class="gallery__item gallery__item--blur">
+                        <a href="./assets/img/gallery/14.png" data-lightbox="roadtrip">
+                            <img src="./assets/img/gallery/14.png" alt="" class="gallery__img">
+                        </a>
+                    </div>
+                    <div class="gallery__item gallery__item--blur">
+                        <a href="./assets/img/gallery/15.png" data-lightbox="roadtrip">
+                            <img src="./assets/img/gallery/15.png" alt="" class="gallery__img">
+                        </a>
+                    </div>
+
+                </div>
+                <div class="gallery__actions">
+                    <button class="gallery__btn btn btn--outline">SEE MORE</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="section__map" id="contact">
+            <div id="map" class="map"></div>
+        </section>
+
+        <section class="section_contact">
+            <div class="container">
+                <div class="contact-container">
+                    <h2 class="contact-title">GET IN TOUCH</h2>
+
+                    <div class="contact-content">
+                        <div class="contact-info">
+                            <p><i class="icon-location">
+                                    <svg class="location-icon" width="16" height="16">
+                                        <use href="./assets/img/sprite/sprite.svg#location"></use>
+                                    </svg>
+                                </i> 91 Nolan Extensions Suite 670</p>
+                            <p><i class="icon-phone">
+                                    <svg class="location-icon" width="16" height="16">
+                                        <use href="./assets/img/sprite/sprite.svg#icon-phone"></use>
+                                    </svg>
+                                </i> +001 356-868-2454</p>
+                            <p><i class="icon-mail">
+                                    <svg class="location-icon" width="16" height="16">
+                                        <use href="./assets/img/sprite/sprite.svg#icon-mail"></use>
+                                    </svg>
+                                </i> montichello@service.com</p>
+                            <p><i class="icon-clock">
+                                    <svg class="location-icon" width="16" height="16">
+                                        <use href="./assets/img/sprite/sprite.svg#icon-clock"></use>
+                                    </svg>
+                                </i> From 07:05AM to 19:30PM</p>
+                        </div>
+
+                        <form class="contact-form">
+                            <input type="text" placeholder="Mollie Medina">
+                            <input type="email" placeholder="Email">
+
+                            <button type="submit">SUBMIT</button>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__position-info">
+                <div class="footer__container">
+                    <a href="#" class="footer__logo">
+                        <img class="footer__logo-img" src="./assets/img/Logo.png" alt="Monticello Logo">
+                    </a>
+                    <div class="header__social">
+                        <a class="header__social-link header__social-link--facebook" href="#" aria-label="Facebook">
+                            <svg class="header__social-icon" width="32" height="32">
+                                <use href="./assets/img/sprite/sprite.svg#facebook"></use>
+                            </svg>
+                        </a>
+                        <a class="header__social-link header__social-link--twitter header__social-link--active" href="#"
+                            aria-label="Twitter">
+                            <svg class="header__social-icon" width="32" height="32">
+                                <use href="./assets/img/sprite/sprite.svg#twitter"></use>
+                            </svg>
+                        </a>
+                        <a class="header__social-link header__social-link--instagram" href="#" aria-label="LinkedIn">
+                            <svg class="header__social-icon" width="32" height="32">
+                                <use href="./assets/img/sprite/sprite.svg#instagram"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <p class="footer__copyright">Copyright © 2020 Monticello</p>
+            </div>
+
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./js/lightbox.js"></script> <!-- Lightbox JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script> Leaflet JS
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- Slick JS -->
+    <script src="js/slider.js"></script>
+    <script src="js/slider_news.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/map.js"></script>
+</body>
+
+</html>

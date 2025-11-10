@@ -1,0 +1,79 @@
+@use "vars" as v;
+
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+
+
+    grid-template-rows: repeat(1, 1fr) &__item {
+        object-fit: cover;
+    }
+
+    &__item--blur {
+        &:hover .gallery__img {
+            transform: scale(1.1);
+        }
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; 
+        display: block; 
+        // ---
+        margin: 0;
+        transition: transform 0.3s ease; 
+    }
+
+    &__item_col_2_row_2 {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+
+    @media (max-width: 1200px) {
+        grid-template-columns: repeat(2, 1fr);
+
+        grid-template-rows: repeat(1, 370px);
+        
+        &__item_col_2_row_2 {
+            grid-column: span 2;
+            grid-row: span 1;
+
+        }
+    }
+
+
+    @media (max-width: 480px) {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 200px;
+
+        &__item_col_2_row_2 {
+            grid-column: span 1;
+            grid-row: span 1;
+        }
+    }
+
+    &__btn {
+        display: inline-block;
+        color: #333;
+        background-color: transparent;
+        border: 1px solid #333;
+        padding: 15px 22px;
+        font-family: v.$font-primary;
+        font-size: 14px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        width: 190px;
+        height: 50px;
+
+    }
+
+    &__btn:hover {
+        background-color: v.$muted;
+        color: #fff;
+    }
+
+
+}
