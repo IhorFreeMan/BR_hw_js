@@ -24,7 +24,7 @@ $('.news-slider').slick({
             }
         },
         {
-            breakpoint: 760,
+            breakpoint: 800,
             settings: {
                 slidesToShow: 1,
                 dots: true,
