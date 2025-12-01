@@ -19,6 +19,7 @@ import { html } from './gulp/tasks/html.js';
 import { scss } from './gulp/tasks/scss.js';
 import { js } from './gulp/tasks/js.js';
 import { server } from './gulp/tasks/server.js';
+import { reset } from './gulp/tasks/reset.js';
 // -- Передача даних в глобальний об'єкт -------------
 global.app = {
     path: path,
@@ -35,6 +36,7 @@ function watcher() {
 
 // Сценарій виконання тасок
 const mainTasks = gulp.parallel(html, scss, js); // js має бути тут!
-const dev = gulp.series(mainTasks, gulp.parallel(watcher, server));
+const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));
 
 gulp.task('default', dev);
+export { html, scss, js, server, reset };
